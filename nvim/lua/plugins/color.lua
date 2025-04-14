@@ -45,10 +45,31 @@ function ColorMyGruber()
     vim.opt.termguicolors = true
     vim.cmd.colorscheme("gruber-darker")
 
+    -- Transparent background for main UI
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 
+    -- Transparent background for LSP floating windows
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
+    vim.api.nvim_set_hl(0, "LspFloatWinNormal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "LspInfoBorder", { bg = "none" })
+
+    -- Transparent background for completion menu
+    vim.api.nvim_set_hl(0, "Pmenu", { bg = "none" })
+
+    -- Transparent background for Telescope
+    vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "none" })
+    vim.api.nvim_set_hl(0, "TelescopePromptNormal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "TelescopePromptBorder", { bg = "none" })
+    vim.api.nvim_set_hl(0, "TelescopeResultsNormal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { bg = "none" })
+
+    -- Optional: make window separators transparent too
+    vim.api.nvim_set_hl(0, "WinSeparator", { bg = "none" })
 end
+
 
 return {
     -- { "rose-pine/neovim",      name = "rose-pine" },
