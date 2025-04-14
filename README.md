@@ -2,7 +2,7 @@
 
 # Neovim Config
 
-##### My dotfiles for Neovim and Tmux
+##### My dotfiles for Neovim, Tmux, and Ghostty
 
 ![lsp](./.resources/lsp.png)
 ![netrw](./.resources/netrw.png)
