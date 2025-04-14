@@ -4,9 +4,9 @@
 
 ##### My dotfiles for Neovim, Tmux, and Ghostty
 
-![lsp](./.resources/lsp.png?v=1)
-![netrw](./.resources/netrw.png?v=1)
-![telescope](./.resources/telescope.png?v=1)
+![lsp](./.resources/lsp.png)
+![netrw](./.resources/netrw.png)
+![telescope](./.resources/telescope.png)
 
 </div>
 
