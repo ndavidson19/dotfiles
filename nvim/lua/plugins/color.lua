@@ -12,9 +12,14 @@ function ColorMyBreakingBad()
     vim.opt.termguicolors = true
     vim.cmd.colorscheme("breakingbad")
 
-    vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#404040" })
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    vim.api.nvim_set_hl(0, "ColorColumn", { bg = "none" })
+    vim.api.nvim_set_hl(0, "Normal",       { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat",  { bg = "none" })
+    vim.api.nvim_set_hl(0, "SignColumn",   { bg = "none" })
+    vim.api.nvim_set_hl(0, "StatusLine",   { bg = "none" })
+    vim.api.nvim_set_hl(0, "VertSplit",    { bg = "none", fg = "#444444" })
+    vim.api.nvim_set_hl(0, "Comment", { bg = "none" })
+    
 end
 
 function ColorMyGruvbox()
@@ -42,15 +47,16 @@ function ColorMyGruber()
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
 end
 
 return {
-    { "rose-pine/neovim",      name = "rose-pine" },
-    { "morhetz/gruvbox",       name = "gruvbox" },
-    { "folke/tokyonight.nvim", name = "tokyonight" },
-    { "w0ng/vim-hybrid",       name = "hybrid" },
-    "i3d/vim-jimbothemes",
+    -- { "rose-pine/neovim",      name = "rose-pine" },
+    -- { "morhetz/gruvbox",       name = "gruvbox", config = ColorMyGruvbox },
+    -- { "folke/tokyonight.nvim", name = "tokyonight" },
+    -- { "w0ng/vim-hybrid",       name = "hybrid" },
+    -- { "i3d/vim-jimbothemes",   name = "breakingbad", config = ColorMyBreakingBad },
     "chrisbra/Colorizer",
-    "lurst/austere.vim",
+    -- "lurst/austere.vim",
     { "blazkowolf/gruber-darker.nvim", name = "gruber-darker", config = ColorMyGruber },
 }

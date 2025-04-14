@@ -10,6 +10,7 @@ if not vim.loop.fs_stat(lazypath) then
     })
 end
 vim.opt.rtp:prepend(lazypath)
+vim.opt.clipboard:append("unnamedplus")
 
 require("neovim.set")
 require("neovim.remap")

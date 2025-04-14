@@ -56,8 +56,14 @@ return {
             require("mason").setup({})
             require("mason-lspconfig").setup({
                 ensure_installed = {
-                    "lua_ls",
+                  "lua_ls",
+                  "pyright",        -- Python
+                  "gopls",          -- Go
+                  "rust_analyzer",  -- Rust
+                  "clangd",         -- C/C++
+                  "tsserver",       -- JS/TS
                 },
+              
                 handlers = {
                     lsp_zero.default_setup,
                     lua_ls = function()
@@ -74,6 +80,28 @@ return {
                                 },
                             },
                         })
+                    end,
+                      -- Optional customizations
+                    pyright = function()
+                        require("lspconfig").pyright.setup({
+                          settings = {
+                            python = {
+                              pythonPath = "/opt/homebrew/opt/python@3.13/bin/python3.13",
+                            }
+                          }
+                        })
+                    end,
+                      
+                    gopls = function()
+                        require("lspconfig").gopls.setup({})
+                    end,
+
+                    clangd = function()
+                        require("lspconfig").clangd.setup({})
+                    end,
+
+                    tsserver = function()
+                        require("lspconfig").tsserver.setup({})
                     end,
                 }
             })
