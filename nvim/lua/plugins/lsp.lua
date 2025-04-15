@@ -61,7 +61,7 @@ return {
                   "gopls",          -- Go
                   "rust_analyzer",  -- Rust
                   "clangd",         -- C/C++
-                  "tsserver",       -- JS/TS
+                  "ts_ls",       -- JS/TS
                 },
               
                 handlers = {
@@ -98,10 +98,6 @@ return {
 
                     clangd = function()
                         require("lspconfig").clangd.setup({})
-                    end,
-
-                    tsserver = function()
-                        require("lspconfig").tsserver.setup({})
                     end,
                 }
             })

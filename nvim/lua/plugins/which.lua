@@ -5,18 +5,16 @@ return {
         require("which-key").setup(opts)
 
         local wk = require("which-key")
-        wk.register({
-            f = { name = "Find", },
-            d = { name = "Debug", },
-            g = { name = "Git", },
-            n = { name = "Neogen", },
-            t = { name = "Testing", },
-            v = { name = "Lsp", },
-            m = { name = "Misc", },
-        }, {
-            prefix = "<leader>",
+        wk.add({
+            { "<leader>f", group = "Find" },
+            { "<leader>d", group = "Debug" },
+            { "<leader>g", group = "Git" },
+            { "<leader>n", group = "Neogen" },
+            { "<leader>t", group = "Testing" },
+            { "<leader>v", group = "Lsp" },
+            { "<leader>m", group = "Misc" },
         })
 
-        vim.keymap.set("n", "<C-h>", "<cmd>:WhichKey<CR>", { silent = true, desc = "Show which-key help" })
+        vim.keymap.set("n", "<C-h>", "<cmd>WhichKey<CR>", { silent = true, desc = "Show which-key help" })
     end,
 }
