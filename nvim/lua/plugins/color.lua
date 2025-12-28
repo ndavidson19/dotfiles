@@ -19,7 +19,22 @@ function ColorMyBreakingBad()
     vim.api.nvim_set_hl(0, "StatusLine",   { bg = "none" })
     vim.api.nvim_set_hl(0, "VertSplit",    { bg = "none", fg = "#444444" })
     vim.api.nvim_set_hl(0, "Comment", { bg = "none" })
-    
+
+end
+
+function ColorMyOneDarkPro()
+  vim.opt.termguicolors = true
+  vim.opt.background = "dark"
+
+  require("onedarkpro").setup({
+    -- Pick a variant: "onedark", "onedark_dark", "onedark_vivid", "onelight", etc.
+    colorscheme = "onedark",
+    options = {
+      transparency = true, -- ✅ built-in transparency
+    },
+  })
+
+  vim.cmd.colorscheme("onedark")
 end
 
 function ColorMyGruvbox()
@@ -77,7 +92,8 @@ return {
     -- { "folke/tokyonight.nvim", name = "tokyonight" },
     -- { "w0ng/vim-hybrid",       name = "hybrid" },
     -- { "i3d/vim-jimbothemes",   name = "breakingbad", config = ColorMyBreakingBad },
-    "chrisbra/Colorizer",
+    -- "chrisbra/Colorizer",
     -- "lurst/austere.vim",
-    { "blazkowolf/gruber-darker.nvim", name = "gruber-darker", config = ColorMyGruber },
+    { "olimorris/onedarkpro.nvim", priority = 1000, config = ColorMyOneDarkPro }
+    -- { "blazkowolf/gruber-darker.nvim", name = "gruber-darker", config = ColorMyGruber },
 }
