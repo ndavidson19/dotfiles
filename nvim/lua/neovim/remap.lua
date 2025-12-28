@@ -55,6 +55,46 @@ map("i", "<C-Space>", "<Esc>", opts)  -- exit insert (Ctrl-Space)
 map("n", "Q", "v", opts)                  -- normal → visual
 map("i", "Q", "<Esc>v", opts)            -- insert → visual
 
+
+-- VISUAL mode movement (WASD)
+map("v", "w", "k", opts)
+map("v", "a", "h", opts)
+map("v", "s", "j", opts)
+map("v", "d", "l", opts)
+
+-- Turbo movement (Shift) in VISUAL too
+map("v", "W", "5k", opts)
+map("v", "A", "5h", opts)
+map("v", "S", "5j", opts)
+map("v", "D", "5l", opts)
+
+-- WORD MOTIONS (Visual)
+map("v", "q", "b", opts)   -- previous word
+map("v", "e", "w", opts)   -- next word
+map("v", "r", "e", opts)   -- end of word
+map("v", "f", "ge", opts)  -- end of previous word
+
+-- VISUAL MODE INDENTING
+map("v", "<Tab>", ">gv", opts)        -- indent right + reselect
+map("v", "<S-Tab>", "<gv", opts)      -- indent left + reselect
+
+
+
+-- PARAGRAPH / BLOCK JUMPS
+map("n", "[", "{", opts)   -- jump block up
+map("n", "]", "}", opts)   -- jump block down
+
+map("v", "[", "{", opts)   -- select block up
+map("v", "]", "}", opts)   -- select block down
+
+
+-- PAGE JUMPS
+map("n", "h", "<C-u>", opts)  -- page up
+map("n", "l", "<C-d>", opts)  -- page down
+
+map("v", "h", "<C-u>", opts)  -- select page up
+map("v", "l", "<C-d>", opts)  -- select page down
+
 -- =========================================================
 -- I O P → RESERVED FOR PLUGINS
 -- =========================================================
